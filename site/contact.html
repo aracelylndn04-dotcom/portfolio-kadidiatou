@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact - Portfolio Kadidiatou</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Contact</h1>
+    <nav class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="formation.html">Formation</a>
+      <a href="competences.html">Compétences</a>
+      <a href="projets.html">Projets</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Mes coordonnées</h2>
+    <div class="card">
+      <p><strong>Email :</strong> aracelylndn04@gmail.com</p>
+      <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/kadidiatou-l-traore-b666ba391?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Mon profil LinkedIn</a></p>
+  </section>
+
+  <section class="section">
+    <h2>M’envoyer un message/ ou donner votre avis sur mon portfolio</h2>
+    <div class="card">
+      <label for="nom">Ton nom</label>
+      <input id="nom" type="text" placeholder="Ex: Marie Dupont">
+
+      <label for="msg">Ton message</label>
+      <textarea id="msg" rows="5" placeholder="Écris ton message ici..."></textarea>
+
+      <button onclick="envoyerMessage()">Envoyer</button>
+
+      <p id="resultat" class="result"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Merci d’avoir pris le temps de visiter mon portfolio. Au plaisir d'être parmis vous et d’échanger avec vous</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

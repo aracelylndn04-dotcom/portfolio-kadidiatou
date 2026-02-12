@@ -1,0 +1,7 @@
+Xa=int(input("Saisit une coordonnée a de l'axe X :"))
+Ya=int(input("Saisit une coordonée a de l'axe Y :"))
+Xb=int(input("Saisit une coordonée b de l'axe X :"))
+Yb=int(input("Saisit une coordonée b de l'axe Y :"))
+Xm=((Xa+Xb)/2)
+Ym=((Ya+Yb)/2)
+print("Les coordonnées du Milieu sont :",Xm,Ym)

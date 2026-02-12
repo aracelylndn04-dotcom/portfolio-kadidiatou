@@ -1,0 +1,305 @@
+/* =========================
+   BASE
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER + MENU
+========================= */
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 18px 0;
+}
+
+.hero-header {
+  background: linear-gradient(180deg, #2c3e50 0%, #263646 100%);
+  padding: 30px 0 22px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.hero-subtitle {
+  margin: 0 0 14px;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.14);
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.menu .active {
+  background: white;
+  color: #2c3e50;
+}
+
+/* =========================
+   MAIN / SECTIONS
+========================= */
+main {
+  padding: 28px 0;
+}
+
+.section {
+  margin: 32px 0;
+}
+
+.section h2 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+/* =========================
+   CARDS (corrige les “gros carrés blancs”)
+========================= */
+.card {
+  background: rgba(255, 255, 255, 0.93);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  margin: 14px 0;
+}
+
+.card h2, .card h3 {
+  margin-top: 0;
+}
+
+/* Cartes sur l’accueil */
+.hero-cards {
+  display: grid;
+  grid-template-columns: 1fr;   /* ✅ une colonne = plus clair */
+  gap: 14px;
+  margin-top: 18px;
+  align-items: start;
+}
+
+/* =========================
+   MINI CARDS / GRIDS
+========================= */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.mini-card {
+  background: white;
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.mini-card h3 {
+  margin-top: 0;
+}
+
+/* =========================
+   BOUTONS
+========================= */
+.hero-buttons {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  background: #1a73e8;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+}
+
+
+.quick-links a {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 10px;
+  color: #2c3e50;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.quick-links a:hover {
+  text-decoration: underline;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: none;
+  background: #2c3e50;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1a252f;
+}
+
+.result {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+
+video {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.photo {
+  width: 220px;
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+footer {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 18px 0;
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+@media (min-width: 900px) {
+  .hero-cards {
+    grid-template-columns: repeat(3, 1fr); /* ✅ 3 colonnes sur grand écran */
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* =========================
+   FIX LISIBILITÉ DES CARTES
+========================= */
+
+/* Forcer le texte des cartes en foncé (sinon il devient blanc et on ne le voit pas) */
+.card {
+  color: #1f1f1f;  /* texte lisible */
+}
+
+/* Titres dans les cartes */
+.card h2, .card h3 {
+  color: #0f2e3d;  /* bleu foncé */
+}
+
+/* Paragraphes et listes dans les cartes */
+.card p, .card li {
+  color: #333333;
+}
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.6s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.profile-photo:hover {
+    transform: rotate(8deg) scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.annotation {
+    margin-top: 15px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
