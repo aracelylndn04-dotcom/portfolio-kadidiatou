@@ -1,0 +1,3 @@
+a=200
+b=a<100
+print("La valeur de b est :", b)
