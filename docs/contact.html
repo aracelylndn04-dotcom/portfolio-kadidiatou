@@ -41,19 +41,17 @@
   <h2>Laisser un avis sur mon portfolio</h2>
   <p class="subtitle">Les avis sont publics et visibles par tous.</p>
 
-  <div class="card">
-    <label>Votre speudonyme</label>
-    <input type="text" id="avisNom" placeholder="Ex : Marie Dupont">
-
-    <label>Votre avis</label>
-    <textarea id="avisTexte" rows="4" placeholder="Votre commentaire..."></textarea>
-
-    <button onclick="ajouterAvis()">Publier l’avis</button>
-
-    <p id="messageAvis" class="message"></p>
+  <div class="card" style="margin-top:12px;">
+    <script
+      src="https://utteranc.es/client.js"
+      repo="aracelylndn04-dotcom/Portfolio-kadidiatou"
+      issue-term="pathname"
+      label="avis"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+    </script>
   </div>
-
-  <div id="listeAvis" class="liste-avis"></div>
 </section>
 </main>
 <script src="script.js"></script>

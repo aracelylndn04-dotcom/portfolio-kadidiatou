@@ -1,4 +1,0 @@
-a="bon"
-b="bo"+"n"
-c=a==b
-print("La valeur de c est :",c)

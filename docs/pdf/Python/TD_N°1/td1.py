@@ -1,1 +1,0 @@
-print("Barbara\nCassandre")
