@@ -23,34 +23,39 @@
 
 <main class="container">
   <section class="section">
-    <h2>Mes coordonnées</h2>
-    <div class="card">
-      <p><strong>Email :</strong> aracelylndn04@gmail.com</p>
-      <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/kadidiatou-l-traore-b666ba391?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Mon profil LinkedIn</a></p>
-  </section>
+  <h2>Mes coordonnées</h2>
 
-  <section class="section">
-    <h2>M’envoyer un message/ ou donner votre avis sur mon portfolio</h2>
-    <div class="card">
-      <label for="nom">Ton nom</label>
-      <input id="nom" type="text" placeholder="Ex: Marie Dupont">
-
-      <label for="msg">Ton message</label>
-      <textarea id="msg" rows="5" placeholder="Écris ton message ici..."></textarea>
-
-      <button onclick="envoyerMessage()">Envoyer</button>
-
-      <p id="resultat" class="result"></p>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">
-    <p>Merci d’avoir pris le temps de visiter mon portfolio. Au plaisir d'être parmis vous et d’échanger avec vous</p>
+  <div class="card contact-card">
+    <p><strong>Email :</strong> araceyIndn04@gmail.com</p>
+    <p><strong>LinkedIn :</strong> 
+      <a href="https://www.linkedin.com/in/kadidiatou-l-traore-b666ba391" target="_blank">Voir mon profil LinkedIn</a>
+    </p>
+    <p><strong>WhatsApp :</strong> 
+      <a href="https://wa.me/33753237703" target="_blank">Me contacter sur WhatsApp</a>
+    </p>
   </div>
-</footer>
+</section>
 
+
+<section class="section">
+  <h2>Laisser un avis sur mon portfolio</h2>
+  <p class="subtitle">Les avis sont publics et visibles par tous.</p>
+
+  <div class="card">
+    <label>Votre speudonyme</label>
+    <input type="text" id="avisNom" placeholder="Ex : Marie Dupont">
+
+    <label>Votre avis</label>
+    <textarea id="avisTexte" rows="4" placeholder="Votre commentaire..."></textarea>
+
+    <button onclick="ajouterAvis()">Publier l’avis</button>
+
+    <p id="messageAvis" class="message"></p>
+  </div>
+
+  <div id="listeAvis" class="liste-avis"></div>
+</section>
+</main>
 <script src="script.js"></script>
 </body>
 </html>

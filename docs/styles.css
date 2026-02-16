@@ -303,3 +303,22 @@ footer {
     color: white;
     text-align: center;
 }
+.subtitle {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.liste-avis {
+  margin-top: 20px;
+}
+
+.avis-item {
+  background: #f5f7fa;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-top: 10px;
+}
