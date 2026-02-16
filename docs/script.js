@@ -29,7 +29,8 @@ function ajouterAvis() {
 
   liste.prepend(avis);
 
-  message.innerText = "Merci d’avoir laissé un avis sur mon portfolio et d’avoir pris le temps de visiter.Au plaisir d'être parmis vous et d’échanger avec vous."
+  message.innerText = "Merci d’avoir laissé un avis sur mon portfolio et d’avoir pris le temps de visiter."<br>
+  "Au plaisir d'être parmis vous et d’échanger avec vous."
   message.style.color = "green";
 
   document.getElementById("avisNom").value = "";
