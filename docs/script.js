@@ -1,37 +1,57 @@
-function envoyerMessage() {
-  const nom = document.getElementById("nom").value.trim();
-  const msg = document.getElementById("msg").value.trim();
-  const resultat = document.getElementById("resultat");
+const SUPABASE_URL = "https://supabase.com/dashboard/project/snfxtnsxaxjjobxxlzkq/advisors/security";   
+const SUPABASE_KEY = "sb_publishable_nZQHebJywm7-e_OLXoJEng_FEbvtuf0"; 
 
-  if (nom === "" || msg === "") {
-    resultat.textContent = " Merci de remplir ton nom et ton message avant d’envoyer.";
-    return;
-  }
-
-  resultat.textContent =
-    " Merci " + nom + " ! Ton message a bien été noté. Je te répondrai dès que possible ";
-}
-function ajouterAvis() {
-  const nom = document.getElementById("avisNom").value;
-  const texte = document.getElementById("avisTexte").value;
+function envoyerAvis() {
+  const nom = document.getElementById("avisNom").value.trim();
+  const texte = document.getElementById("avisTexte").value.trim();
   const message = document.getElementById("messageAvis");
-  const liste = document.getElementById("listeAvis");
 
-  if (nom === "" || texte === "") {
-    message.innerText = "Veuillez remplir les champs.";
-    message.style.color = "red";
+  if (!nom || !texte) {
+    message.innerText = "Remplis tous les champs.";
     return;
   }
 
-  const avis = document.createElement("div");
-  avis.className = "avis-item";
-  avis.innerHTML = `<strong>${nom}</strong><p>${texte}</p>`;
-
-  liste.prepend(avis);
-
-  message.innerText = "Merci d’avoir laissé un avis sur mon portfolio et d’avoir pris le temps de visiter.Au plaisir d'être parmis vous et d’échanger avec vous."
-  message.style.color = "green";
-
-  document.getElementById("avisNom").value = "";
-  document.getElementById("avisTexte").value = "";
+  fetch(`${SUPABASE_URL}/rest/v1/avis`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "apikey": SUPABASE_KEY,
+      "Authorization": `Bearer ${SUPABASE_KEY}`
+    },
+    body: JSON.stringify({ nom, texte })
+  })
+  .then(res => {
+    if (!res.ok) throw new Error("Erreur Supabase");
+    message.innerText = "Avis publié ✅";
+    document.getElementById("avisNom").value = "";
+    document.getElementById("avisTexte").value = "";
+    chargerAvis();
+  })
+  .catch(() => {
+    message.innerText = "Erreur : impossible de publier l'avis.";
+  });
 }
+
+function chargerAvis() {
+  fetch(`${SUPABASE_URL}/rest/v1/avis?select=*&order=created_at.desc`, {
+    headers: {
+      "apikey": SUPABASE_KEY,
+      "Authorization": `Bearer ${SUPABASE_KEY}`
+    }
+  })
+  .then(res => res.json())
+  .then(data => {
+    const liste = document.getElementById("listeAvis");
+    if (!liste) return;
+
+    liste.innerHTML = "";
+    data.forEach(a => {
+      const div = document.createElement("div");
+      div.className = "avis-item";
+      div.innerHTML = `<strong>${a.nom}</strong><br>${a.texte}`;
+      liste.appendChild(div);
+    });
+  });
+}
+
+window.addEventListener("load", chargerAvis);
