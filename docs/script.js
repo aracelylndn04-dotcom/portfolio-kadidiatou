@@ -1,4 +1,4 @@
-const SUPABASE_URL = "https://supabase.com/dashboard/project/snfxtnsxaxjjobxxlzkq/advisors/security";   
+const SUPABASE_URL = "https://snftxnsaxjjobxkzlq.supabase.co";   
 const SUPABASE_KEY = "sb_publishable_nZQHebJywm7-e_OLXoJEng_FEbvtuf0"; 
 
 function envoyerAvis() {
