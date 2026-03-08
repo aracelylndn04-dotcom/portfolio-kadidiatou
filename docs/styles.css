@@ -324,5 +324,40 @@ footer {
 }
 
 
+/* ================== AVIS ================== */
+.liste-avis{
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
 
+.avis-item{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+border-left:4px solid #4f7cff;
+}
 
+.avis-item strong{
+color:#4f7cff;
+}
+
+.avis-item p{
+margin:5px 0 0 0;
+color:#444;
+}
+
+/* ================== STYLE PDF ================== */
+a{
+text-decoration:none;
+font-weight:500;
+color:#4f7cff;
+transition:0.3s;
+}
+
+a:hover{
+color:#355edb;
+text-decoration:underline;
+}

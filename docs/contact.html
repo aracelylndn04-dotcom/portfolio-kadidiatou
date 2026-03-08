@@ -38,20 +38,28 @@
   </div>
 </section>
 
-<section class="section">
-  <h2>Laisser un avis sur mon portfolio</h2>
-  <p class="subtitle">Les avis sont publics et visibles par tous.</p>
+<section class="avis-section">
 
-  <div class="card">
-    <label>Votre pseudonyme</label>
-    <input type="text" id="avisNom" placeholder="Ex : kadidiatou Traoré">
+<h2>Laisser un avis</h2>
 
-    <label>Votre avis</label>
-    <textarea id="avisTexte" rows="4" placeholder="Votre commentaire..."></textarea>
-    <button type="button" onclick="envoyerAvis()">Publier</button>
-    <p id="messageAvis" class="message"></p>
-  <div id="listeAvis" class="liste-avis"></div>
-<script src="script.js"></script>
+<form id="formAvis">
+
+<label for="nom">Nom</label>
+<input type="text" id="nom" placeholder="Votre nom" required>
+
+<label for="message">Votre avis</label>
+<textarea id="message" rows="4" placeholder="Votre message..." required></textarea>
+
+<button type="submit">Publier</button>
+
+</form>
+
+<h3>Avis publiés</h3>
+
+<div class="avis-container" id="listeAvis">
+
+</div>
+
 </section>
 </main>
 </body>
