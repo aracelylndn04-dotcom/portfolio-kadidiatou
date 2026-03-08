@@ -350,14 +350,27 @@ color:#444;
 }
 
 /* ================== STYLE PDF ================== */
-a{
-text-decoration:none;
-font-weight:500;
-color:#4f7cff;
-transition:0.3s;
+.doc-link{
+  display:inline-block;
+  margin-top:10px;
+  margin-right:10px;
+  padding:10px 16px;
+  background:#f4f7ff;
+  color:#355edb !important;
+  text-decoration:none !important;
+  border-radius:8px;
+  font-weight:600;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+  transition:all 0.3s ease;
 }
 
-a:hover{
-color:#355edb;
-text-decoration:underline;
+.doc-link:hover{
+  background:#4f7cff;
+  color:white !important;
+  transform:translateY(-2px);
+  box-shadow:0 6px 14px rgba(0,0,0,0.12);
+}
+
+.doc-link::before{
+  content:"📄 ";
 }

@@ -39,27 +39,23 @@
 </section>
 
 <section class="avis-section">
+  <h2>Laisser un avis</h2>
 
-<h2>Laisser un avis</h2>
+  <div class="card">
+    <label for="avisNom">Nom</label>
+    <input type="text" id="avisNom" placeholder="Votre nom">
 
-<form id="formAvis">
+    <label for="avisTexte">Votre avis</label>
+    <textarea id="avisTexte" rows="4" placeholder="Votre message..."></textarea>
 
-<label for="nom">Nom</label>
-<input type="text" id="nom" placeholder="Votre nom" required>
+    <button type="button" onclick="envoyerAvis()">Publier</button>
 
-<label for="message">Votre avis</label>
-<textarea id="message" rows="4" placeholder="Votre message..." required></textarea>
+    <p id="messageAvis"></p>
+  </div>
 
-<button type="submit">Publier</button>
+  <h3>Avis publiés</h3>
 
-</form>
-
-<h3>Avis publiés</h3>
-
-<div class="avis-container" id="listeAvis">
-
-</div>
-
+  <div class="liste-avis" id="listeAvis"></div>
 </section>
 </main>
 </body>
